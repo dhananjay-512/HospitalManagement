@@ -2,14 +2,16 @@
 {
     public class Patient
     {
-        public int PatientId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Gender { get; set; }
+        public int? DiseaseId { get; set; }
+        public int? DoctorId { get; set; }
+        public DateTime AdmittedDate { get; set; }
+        public DateTime? DischargeDate { get; set; }
 
-        public string ContactNumber { get; set; }
-        public string Address { get; set; }
-
+        public virtual Doctor? Doctor { get; set; }
+        public virtual Disease? Diseases { get; set; }
     }
-
 }

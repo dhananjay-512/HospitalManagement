@@ -12,7 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="PatientId" />
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -29,14 +29,24 @@
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ContactNumber" class="control-label"></label>
-                <input asp-for="ContactNumber" class="form-control" />
-                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                <label asp-for="DiseaseId" class="control-label"></label>
+                <select asp-for="DiseaseId" class="form-control" asp-items="ViewBag.DiseaseId"></select>
+                <span asp-validation-for="DiseaseId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
+                <label asp-for="DoctorId" class="control-label"></label>
+                <select asp-for="DoctorId" class="form-control" asp-items="ViewBag.DoctorId"></select>
+                <span asp-validation-for="DoctorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdmittedDate" class="control-label"></label>
+                <input asp-for="AdmittedDate" class="form-control" />
+                <span asp-validation-for="AdmittedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DischargeDate" class="control-label"></label>
+                <input asp-for="DischargeDate" class="form-control" />
+                <span asp-validation-for="DischargeDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

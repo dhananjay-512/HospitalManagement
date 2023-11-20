@@ -30,21 +30,33 @@
             @Html.DisplayFor(model => model.Gender)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ContactNumber)
+            @Html.DisplayNameFor(model => model.AdmittedDate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ContactNumber)
+            @Html.DisplayFor(model => model.AdmittedDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.DischargeDate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
+            @Html.DisplayFor(model => model.DischargeDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Doctor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Doctor.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Diseases)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Diseases.Id)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="PatientId" />
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

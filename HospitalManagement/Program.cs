@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
-var app = builder.Build();
+var app = builder.Build() 
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -30,9 +30,17 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapControllerRoute(
+app.  MapControllerRoute(
     name: "default1",
     pattern: "{controller=Patient}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default2",
+    pattern: "{controller=Disease}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default3",
+    pattern: "{controller=Doctor}/{action=Index}/{id?}");
 
 
 app.Run();
